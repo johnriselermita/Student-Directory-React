@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 20px;
+    background-color: aliceblue;
+    color: darkblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+
+header {
+    padding: 20px 30px;
+    background-color: lightcyan;
+    border: 2px solid darkblue;
+    border-radius: 20px;
+    box-shadow: 2px 2px blue;
+    text-shadow: 1px 1px rgba(1, 1, 1, 0.25);
+}
+
+header > h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+header > small {
+    font-size: 1.25rem;
+}
+
+/* Form */
+
+#FormContainer {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: lightcyan;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#FormContainer > #studentForm > .input_fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+#studentForm input,
+#studentForm select,
+#studentForm textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+}
+
+/* Student list */
+
+#studentList {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#studentList > .list-item {
+    min-width: 0;
+    padding: 20px;
+    background-color: lightcyan;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px blue;
+    overflow-wrap: anywhere;
+}
+
+/* Buttons */
+
+#studentForm button {
+    padding: 10px 16px;
+    color: white;
+    background-color: blue;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#studentForm button:hover {
+    background-color: red;
+}
+
+/* Responsive layout */
+
+@media (width <= 1000px) {
+    #studentList > .list-item {
+        grid-column: span 2;
+    }
+}
+
+@media (width <= 320) and (width <= 600px) {
+    #studentList > .list-item {
+        grid-column: span 3;
+    }
+}
+
+@media (width <= 380px) {
+    #studentList > .list-item {
+        grid-column: span 12;
+    }
+}
